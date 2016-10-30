@@ -26,3 +26,15 @@ function farm_map_kartverket_default_openlayers_layers() {
 
   return $export;
 }
+
+/**
+ * Implements hook_default_openlayers_layers_alter().
+ */
+function farm_map_kartverket_default_openlayers_layers_alter(&$layers) {
+
+  // Add Kartverket layers to farm_map_layer_group.
+  if (!empty($layers['farm_map_layer_group'])) {
+    array_unshift($layers['farm_map_layer_group']->options['grouplayers'], 'farm_map_kartverket_layer_norgres_grunnkar');
+  }
+}
+
