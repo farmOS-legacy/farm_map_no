@@ -14,7 +14,7 @@ function farm_map_kartverket_default_openlayers_layers() {
   $ol_layer->disabled = FALSE; /* Edit this to true to make a default ol_layer disabled initially */
   $ol_layer->api_version = 1;
   $ol_layer->machine_name = 'farm_map_kartverket_layer_norgres_grunnkar';
-  $ol_layer->name = 'Farm Map Kartverket: Norges Grunnkart';
+  $ol_layer->name = 'Kartverket: Norges Grunnkart';
   $ol_layer->description = '';
   $ol_layer->factory_service = 'openlayers.Layer:Tile';
   $ol_layer->options = array(
