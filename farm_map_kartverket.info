@@ -8,4 +8,6 @@ features[ctools][] = openlayers:default_openlayers_layers:1
 features[ctools][] = openlayers:default_openlayers_sources:1
 features[features_api][] = api:2
 features[openlayers_layers][] = farm_map_kartverket_layer_norgres_grunnkar
+features[openlayers_layers][] = farm_map_kartverket_layer_topo2
 features[openlayers_sources][] = farm_map_kartverket_source_norges_grunnkart
+features[openlayers_sources][] = farm_map_kartverket_source_topo2
