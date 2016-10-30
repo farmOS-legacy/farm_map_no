@@ -1,0 +1,11 @@
+name = Farm Map: Kartverket
+description = Norwegian mapping authority layers for farmOS maps.
+core = 7.x
+package = farmOS
+dependencies[] = ctools
+dependencies[] = openlayers
+features[ctools][] = openlayers:default_openlayers_layers:1
+features[ctools][] = openlayers:default_openlayers_sources:1
+features[features_api][] = api:2
+features[openlayers_layers][] = farm_map_kartverket_layer_norgres_grunnkar
+features[openlayers_sources][] = farm_map_kartverket_source_norges_grunnkart
