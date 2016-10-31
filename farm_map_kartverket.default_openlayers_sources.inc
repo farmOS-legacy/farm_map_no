@@ -18,13 +18,6 @@ function farm_map_kartverket_default_openlayers_sources() {
   $ol_source->description = '';
   $ol_source->factory_service = 'openlayers.Source:InlineJS';
   $ol_source->options = array(
-    'url' => 'http://opencache.statkart.no/gatekeeper/gk/gk.open_wmts',
-    'wms_layers' => 'matrikkel_bakgrunn',
-    'version' => '1.0.0',
-    'params' => array(
-      'LAYERS' => 'matrikkel_bakgrunn',
-      'VERSION' => '1.0.0',
-    ),
     'javascript' => '// Code adapted from https://github.com/kartverket/example-clients/blob/master/openlayers3/wmts_mercator.html
 
 //Start: projection & tileGrid definitions
@@ -81,13 +74,6 @@ var source = new ol.source.WMTS({
   $ol_source->description = '';
   $ol_source->factory_service = 'openlayers.Source:InlineJS';
   $ol_source->options = array(
-    'url' => 'http://opencache.statkart.no/gatekeeper/gk/gk.open_wmts',
-    'wms_layers' => 'matrikkel_bakgrunn',
-    'version' => '1.0.0',
-    'params' => array(
-      'LAYERS' => 'matrikkel_bakgrunn',
-      'VERSION' => '1.0.0',
-    ),
     'javascript' => '// Code adapted from https://github.com/kartverket/example-clients/blob/master/openlayers3/wmts_mercator.html
 
 //Start: projection & tileGrid definitions
