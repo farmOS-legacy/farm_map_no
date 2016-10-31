@@ -5,3 +5,20 @@
  */
 
 include_once 'farm_map_kartverket.features.inc';
+/**
+ * Define the URL of the Kartverket WMTS.
+ */
+function farm_map_kartverket_wmts() {
+  return 'http://opencache.statkart.no/gatekeeper/gk/gk.open_wmts';
+}
+
+/**
+ * List the layers to include from Kartverket's WMTS.
+ */
+function farm_map_kartverket_wmts_layers() {
+  return array(
+    'norges_grunnkart' => t('Norges Grunnkart'),
+    'topo2' => t('Topo2'),
+  );
+}
+
