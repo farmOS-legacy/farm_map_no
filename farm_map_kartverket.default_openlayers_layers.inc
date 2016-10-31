@@ -40,8 +40,19 @@ function farm_map_kartverket_default_openlayers_layers_alter(&$layers) {
 
   // Add Kartverket layers to farm_map_layer_group.
   if (!empty($layers['farm_map_layer_group'])) {
-    array_unshift($layers['farm_map_layer_group']->options['grouplayers'], 'farm_map_kartverket_layer_topo2');
-    array_unshift($layers['farm_map_layer_group']->options['grouplayers'], 'farm_map_kartverket_layer_norgres_grunnkar');
+
+    // Load the Kartverket layer names.
+    $kartverket_layers = farm_map_kartverket_wmts_layers();
+
+    // Create a list of Openlayers layer names.
+    $kartverket_ol_layers = array();
+    foreach ($kartverket_layers as $layer => $name) {
+      $kartverket_ol_layers[] = 'farm_map_kartverket_layer_' . $layer;
+    }
+
+    // Merge into existing layers.
+    $existing_layers = $layers['farm_map_layer_group']->options['grouplayers'];
+    $layers['farm_map_layer_group']->options['grouplayers'] = array_merge($kartverket_ol_layers, $existing_layers);
   }
 }
 
