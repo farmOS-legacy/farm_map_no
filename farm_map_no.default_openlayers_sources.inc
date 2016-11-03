@@ -1,20 +1,20 @@
 <?php
 /**
  * @file
- * farm_map_kartverket.default_openlayers_sources.inc
+ * farm_map_no.default_openlayers_sources.inc
  */
 
 /**
  * Implements hook_default_openlayers_sources().
  */
-function farm_map_kartverket_default_openlayers_sources() {
+function farm_map_no_default_openlayers_sources() {
   $export = array();
 
   // Load the Kartverket WMTS URL.
-  $url = farm_map_kartverket_wmts();
+  $url = farm_map_no_kartverket_wmts();
 
   // Load the Kartverket layer names.
-  $layers = farm_map_kartverket_wmts_layers();
+  $layers = farm_map_no_kartverket_wmts_layers();
 
   // Generate a source for each layer.
   foreach ($layers as $layer => $name) {
@@ -22,8 +22,8 @@ function farm_map_kartverket_default_openlayers_sources() {
     $ol_source = new stdClass();
 		$ol_source->disabled = FALSE; /* Edit this to true to make a default ol_source disabled initially */
 		$ol_source->api_version = 1;
-		$ol_source->machine_name = 'farm_map_kartverket_source_' . $layer;
-		$ol_source->name = 'Farm Map Kartverket: ' . $name;
+		$ol_source->machine_name = 'farm_map_no_source_kartverket' . $layer;
+		$ol_source->name = 'Farm Map Norway: Kartverket ' . $name;
 		$ol_source->description = '';
 		$ol_source->factory_service = 'openlayers.Source:InlineJS';
 		$ol_source->options = array(
@@ -77,7 +77,7 @@ var source = new ol.source.WMTS({
 
 ',
 		);
-		$export['farm_map_kartverket_source_' . $layer] = $ol_source;
+		$export['farm_map_no_source_kartverket_' . $layer] = $ol_source;
   }
 
   return $export;

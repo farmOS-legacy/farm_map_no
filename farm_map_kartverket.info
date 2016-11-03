@@ -1,7 +1,0 @@
-name = Farm Map: Kartverket
-description = Norwegian mapping authority layers for farmOS maps.
-core = 7.x
-package = farmOS
-dependencies[] = ctools
-dependencies[] = openlayers
-
