@@ -80,5 +80,18 @@ var source = new ol.source.WMTS({
 		$export['farm_map_no_source_kartverket_' . $layer] = $ol_source;
   }
 
+  // Generate a Norkart Flyfoto source.
+  $ol_source = new stdClass();
+  $ol_source->disabled = FALSE; /* Edit this to true to make a default ol_source disabled initially */
+  $ol_source->api_version = 1;
+  $ol_source->machine_name = 'farm_map_no_source_norkart_flyfoto';
+  $ol_source->name = 'Farm Map Norway: Norkart Flyfoto';
+  $ol_source->description = '';
+  $ol_source->factory_service = 'openlayers.Source:XYZ';
+  $ol_source->options = array(
+    'url' => 'http://map04.eniro.no/geowebcache/service/tms1.0.0/aerial/{z}/{x}/{-y}.jpeg?c=2542211020&v=20160420',
+  );
+  $export['farm_map_no_source_norkart_flyfoto'] = $ol_source;
+
   return $export;
 }
