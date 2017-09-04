@@ -1,7 +1,6 @@
 name = Farm Map: Norway
 description = Norwegian map layers for farmOS maps.
 core = 7.x
-package = farmOS
+package = farmOS Contrib
 dependencies[] = ctools
 dependencies[] = openlayers
-
