@@ -18,6 +18,6 @@ function farm_map_no_farm_map_behaviors() {
 /**
  * Implements hook_farm_map_view().
  */
-function farm_farm_map_no_farm_map_view($name, $element) {
+function farm_map_no_farm_map_view($name, $element) {
   farm_map_add_behavior('farm_map_no');
 }
